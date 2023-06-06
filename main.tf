@@ -16,11 +16,13 @@ variable "subject" {
 
 variable "name" {
   type = string
+  default = "sample-rg"
 
 }
 
 variable "location" {
   type = string
+  default = "westeurope"
 }
 
 output "hello_world" {
