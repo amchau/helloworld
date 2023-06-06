@@ -15,13 +15,13 @@ variable "subject" {
 }
 
 variable "name" {
-  type = string
+  type    = string
   default = "sample-rg"
 
 }
 
 variable "location" {
-  type = string
+  type    = string
   default = "westeurope"
 }
 
@@ -31,7 +31,8 @@ output "hello_world" {
 
 provider "azurerm" {
   features {}
-  use_msi = true
+  use_msi  = true
+  cient_id = "44e1e707-5095-4e56-9f8e-6db273d5dc81"
 }
 
 resource "azurerm_resource_group" "this" {
