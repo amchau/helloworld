@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.0.0"
+      version = "=3.59.0"
     }
   }
 }
@@ -29,12 +29,12 @@ output "hello_world" {
   value = "Hello, ${var.subject}!"
 }
 
-provider "azurerm" {
-  features {}
-  use_msi  = true
-  client_id = "44e1e707-5095-4e56-9f8e-6db273d5dc81"
-  subscription_id = "15892d4f-f4e2-4e07-beb7-083eaaaa0245"
-}
+#provider "azurerm" {
+#  features {}
+#  use_msi  = true
+#  client_id = "44e1e707-5095-4e56-9f8e-6db273d5dc81"
+#  subscription_id = "15892d4f-f4e2-4e07-beb7-083eaaaa0245"
+#}
 
 resource "azurerm_resource_group" "this" {
   name     = var.name
